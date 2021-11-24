@@ -1,0 +1,20 @@
+<div class="customer">
+    {% if customer.logged %}
+        <div class="drop-login">
+            <a href="{{ links.account }}">
+                <i class="far fa-user"></i>
+            </a>
+            <p>Olá <strong>{{ customer.name }}</strong> <i class="fas fa-angle-down"></i></p>
+            <div class="drop-customer">
+                <a href="{{ links.account }}">Minha Conta</a>
+                <a href="{{ links.orders }}">Meus pedidos</a>
+                <a href="{{ links.logout }}">Sair</a>
+            </div>
+        </div>
+    {% else %}
+        <div class="customer__flex">
+            <i class="far fa-user"></i>
+            <a href="{{ links.login }}"><strong>Login / Cadastro</strong></a>
+        </div>
+    {% endif %}
+</div>
