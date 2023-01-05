@@ -39,6 +39,26 @@
                 }
             }
 
+            .btn-compare {
+                background-color: var(--bgButton);
+                border-radius: 5px;
+                color: var(--textButton);
+                padding: 6px 10px;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: var(--textButton);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            
+                @media(max-width: 1024px) {
+                    padding: 6px 8px 5px;
+                    font-size: 12px;
+                }
+            }
+
             .form-ordenation {
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -95,6 +115,10 @@
     
         .catalog__showcase {
             width: 70%;
+
+            .btn-compare-catalog {
+                width: 25%;
+            }
         }
     }
 
