@@ -9,12 +9,14 @@
             <div class="colum-prod-photo">
                 <div class="content-image">
                     <div class="zoom-content-image">
-                        <img class="content-image__full" onmouseover="magnify('.content-image__full', 1.7)" src="{{ images[0].full }}">
+                        <img class="content-image__full" onmouseover="magnify('.content-image__full', 1.7)"
+                            src="{{ images[0].full }}">
                     </div>
                     <div class="content-image__carrossel control-thumb">
                         <div class="thumb-carrossel">
                             {% for thumb in images %}
-                                <img class="thumb change-photo" onClick="changeMainPhoto('{{ thumb.full }}')" src="{{ thumb.large }}">
+                            <img class="thumb change-photo" onClick="changeMainPhoto('{{ thumb.full }}')"
+                                src="{{ thumb.large }}">
                             {% endfor %}
                         </div>
                         <button class="slider-prev"><i class="fas fa-angle-left"></i></button>
@@ -70,34 +72,41 @@
                 </div>
 
                 {% if product.upon_request %}
-                    <form id="form_comprar" class="buy-content upon-request" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
-                        {{ productHelper.pricing() }}
-                    </form>
+                <form id="form_comprar" class="buy-content upon-request" method="post" data-app="product.buy-form"
+                    action="{{ links.cart_add ~ product.id }}">
+                    {{ productHelper.pricing() }}
+                </form>
                 {% else %}
-                    <form id="form_comprar" class="buy-content" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
-                        <div class="variants-content">
-                            {{ productHelper.variants() }}
-                        </div>
-                        <div class="qtde-content">
-                            <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>
-                            <div class="flex-qtde-buy">
-                                <div data-app="product.quantity" id="quantidade">
-                                    <input type="button" id="plus" value='-' onclick="process(-1)" />
-                                    <input id="quant" name="quant" class="text" size="1" type="text" value="1" maxlength="5" />
-                                    <input type="button" id="minus" value='+' onclick="process(1)">
-                                </div>
-                                <button class="btn-buy" type="submit">Comprar</button>
-                            </div>
-                        </div>
-                    </form>
-                {% endif %}
-                
-                {% if productHelper.kit() %}
-                    <div class="kit-content">
-                        {{ productHelper.kit() }}
+                <form id="form_comprar" class="buy-content" method="post" data-app="product.buy-form"
+                    action="{{ links.cart_add ~ product.id }}">
+                    <div class="variants-content">
+                        {{ productHelper.variants() }}
                     </div>
+                    <div class="product-add-information">
+                        {{ product.additional_information }}
+                    </div>
+                    <div class="qtde-content">
+                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para
+                            variação do produto</span>
+                        <div class="flex-qtde-buy">
+                            <div data-app="product.quantity" id="quantidade">
+                                <input type="button" id="plus" value='-' onclick="process(-1)" />
+                                <input id="quant" name="quant" class="text" size="1" type="text" value="1"
+                                    maxlength="5" />
+                                <input type="button" id="minus" value='+' onclick="process(1)">
+                            </div>
+                            <button class="btn-buy" type="submit">Comprar</button>
+                        </div>
+                    </div>
+                </form>
                 {% endif %}
-                
+
+                {% if productHelper.kit() %}
+                <div class="kit-content">
+                    {{ productHelper.kit() }}
+                </div>
+                {% endif %}
+
                 <div class="frete-content">
                     {{ productHelper.shipping() }}
                 </div>
@@ -106,17 +115,19 @@
     </div>
 
     {% if productHelper.bundle() %}
-        <div class="bundle-content">
-            <h1 class="showcase__title">Compre Junto</h1>
-            {{ productHelper.bundle() }}
-        </div>
+    <div class="bundle-content">
+        <h1 class="showcase__title">Compre Junto</h1>
+        {{ productHelper.bundle() }}
+    </div>
     {% endif %}
-    
+
     {% if product.video %}
-        <div class="video-content">
-            <h1 class="title">Vídeo</h1>
-            <iframe class="video-content__responsive" width="1904" height="768" src="{{ product.video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+    <div class="video-content">
+        <h1 class="title">Vídeo</h1>
+        <iframe class="video-content__responsive" width="1904" height="768" src="{{ product.video }}" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
     {% endif %}
 
     <div id="ProdBlock" class="product-tabs">
@@ -124,15 +135,16 @@
         <div id="ProdAbas" class="abasProduto tab-panel">
             <ul class="list-tabs">
                 {% for key, tab in productTabs %}
-                  {% if tab.container_id %}
-                  <li id="{{ tab.id }}" {% if key=='description' %}class="aberta" {% endif %}>
-                    <a href="#" data-tab-container-id="{{ tab.container_id }}" data-tab-url="{{ tab.url }}">{{ tab.description }}</a>
-                  </li>
-                  {% endif %}
+                {% if tab.container_id %}
+                <li id="{{ tab.id }}" {% if key=='description' %}class="aberta" {% endif %}>
+                    <a href="#" data-tab-container-id="{{ tab.container_id }}" data-tab-url="{{ tab.url }}">{{
+                        tab.description }}</a>
+                </li>
+                {% endif %}
                 {% endfor %}
             </ul>
         </div>
-    
+
         <div id="descricao" class="prodBox">
             <div class="board">
                 <div class="board_htm description">
@@ -140,32 +152,32 @@
                 </div>
             </div>
         </div>
-    
+
         <div id="itensInclusos" class="prodBox">
             <div class="board">
                 {{ product.included_items }}
             </div>
         </div>
-    
+
         <div id="coments" class="prodBox">
             <div class="board">
                 {% element 'product/comments' %}
             </div>
         </div>
-    
+
         <div id="caracteristicas" class="prodBox">
             <div class='board'>
                 {% element 'product/properties' %}
             </div>
         </div>
-    
+
         {{ productTabs.custom.content }}
         {{ productTabs.downloads.content }}
-    
+
         <div id="garantia" class="prodBox">
-            <img class="loader" src="{{ tray.paths.system_image }}/big-loading.svg"  />
+            <img class="loader" src="{{ tray.paths.system_image }}/big-loading.svg" />
         </div>
-        <div data-app="product.payment-methods" id="formasPagto" class="prodBox"  ></div>
+        <div data-app="product.payment-methods" id="formasPagto" class="prodBox"></div>
     </div>
 </div>
 
@@ -175,9 +187,10 @@
     <div class="control">
         <ul class="showcase-content product-carrossel prod" style="width: 100%;">
             {% for related in product.related_products %}
-                <li class="showcase-content__item" data-tray-tst="vitrine_produto" itemscope itemtype="https://schema.org/SomeProducts">
-                    {% element 'snippets/product' {"product": related} %}
-                </li>
+            <li class="showcase-content__item" data-tray-tst="vitrine_produto" itemscope
+                itemtype="https://schema.org/SomeProducts">
+                {% element 'snippets/product' {"product": related} %}
+            </li>
             {% endfor %}
         </ul>
     </div>
@@ -185,12 +198,12 @@
 {% endif %}
 
 <script>
-    function process(quant){
+    function process(quant) {
         var value = parseInt(document.getElementById("quant").value);
-        value+=quant;
-        if(value < 1){
+        value += quant;
+        if (value < 1) {
             document.getElementById("quant").value = 1;
-        }else{
+        } else {
             document.getElementById("quant").value = value;
         }
     }
@@ -201,10 +214,10 @@
         imageFullContent.setAttribute('src', link);
     }
 
-    (function(){
-        setTimeout(function(){
+    (function () {
+        setTimeout(function () {
             var price = document.querySelector('.price-content .price');
-            if(price.dataset.pricefull == '0.00') {
+            if (price.dataset.pricefull == '0.00') {
                 price.innerHTML = "Produto sob consulta."
             }
         }, 500)
