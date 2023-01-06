@@ -681,6 +681,12 @@
                     width: calc(100% / 4);
                     text-align: center;
                     margin: 15px 0;
+
+                    a {
+                        &:hover {
+                            border-bottom: 1px solid;
+                        }
+                    }
                 }
 
                 .more-categories__item.dropdown {
