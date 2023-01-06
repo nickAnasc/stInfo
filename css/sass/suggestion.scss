@@ -16,6 +16,8 @@
         left: 50%;
         transform: translateX(-50vw);
         width: 100vw;
+        height: 420px;
+        overflow: scroll;
     }
     
     &.is-hidden{
