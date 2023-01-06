@@ -97,7 +97,12 @@
         </a>
     </div>
     {% endif %}
-    <a class="btn-comprar" href="{{ product.link }}" alt="comprar">{{ product.upon_request ? "Consultar Preço" : "Comprar" }}<i class="fas fa-arrow-right"></i></a>
+    <a class="btn-comprar" href="{{ product.link }}" alt="comprar">
+        {{ product.upon_request ? "Consultar Preço" : "Comprar" }}
+        {% if product.upon_request == false %}
+            <i class="fas fa-arrow-right"></i>
+        {% endif %}
+    </a>
 </div>
 
 <script>
