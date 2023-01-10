@@ -947,10 +947,12 @@ body {
 .infobox.danger {
   display: none; }
 
-.control {
+.control, .brands-carrossel, .regua-carrossel {
   position: relative; }
   .control .slider-prev,
-  .control .slider-next {
+  .control .slider-next, .brands-carrossel .slider-prev,
+  .brands-carrossel .slider-next, .regua-carrossel .slider-prev,
+  .regua-carrossel .slider-next {
     position: absolute;
     top: 50%;
     font-size: 30px;
@@ -967,9 +969,9 @@ body {
     height: 30px;
     border-radius: 50%;
     font-size: 20px; }
-  .control .slider-prev {
+  .control .slider-prev, .brands-carrossel .slider-prev, .regua-carrossel .slider-prev {
     left: 1%; }
-  .control .slider-next {
+  .control .slider-next, .brands-carrossel .slider-next, .regua-carrossel .slider-next {
     right: 1%; }
 
 .glider {
@@ -1934,11 +1936,11 @@ div[id^="AbaPersonalizada"] table td {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      margin-left: 20px;
+      margin: 20px;
       padding: 15px;
       background-color: #fff;
-      margin-bottom: 20px;
-      border-radius: 20px 20px 0; }
+      border-radius: 20px 20px 0;
+      flex-wrap: wrap; }
       @media (max-width: 991px) {
         .catalog .catalog__showcase .flex-showcase-components {
           margin-left: 0; }
@@ -1975,10 +1977,7 @@ div[id^="AbaPersonalizada"] table td {
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
-            flex-direction: column; }
-            .catalog .catalog__showcase .flex-showcase-components .form-ordenation .order {
-              margin-right: 0;
-              margin-bottom: 5px; } }
+            flex-direction: column; } }
         .catalog .catalog__showcase .flex-showcase-components .form-ordenation .select-filter {
           padding: 10px;
           border: 2px solid #ddd;
@@ -1998,9 +1997,7 @@ div[id^="AbaPersonalizada"] table td {
     .catalog .catalog__filter {
       width: 30%; }
     .catalog .catalog__showcase {
-      width: 70%; }
-      .catalog .catalog__showcase .btn-compare-catalog {
-        width: 25%; } }
+      width: 70%; } }
   @media (max-width: 991px) {
     .catalog .catalog__filter {
       width: 100%;
@@ -4397,13 +4394,13 @@ div[id^="AbaPersonalizada"] table td {
               .product-content .product-content__flex .colum-prod-info .product-add-information .varCont > * .select {
                 width: 100%; } }
           .product-content .product-content__flex .colum-prod-info .product-add-information .varCont > * .textarea {
-            border-radius: 30px;
+            border-radius: 5px;
             border: 1px solid #ccc;
             font-size: 15px;
             width: 100%;
             transition: .3s;
             resize: none;
-            padding: 10px 40px; }
+            padding: 10px; }
             .product-content .product-content__flex .colum-prod-info .product-add-information .varCont > * .textarea:focus {
               border: 1px solid #000; }
       .product-content .product-content__flex .colum-prod-info .frete-content {
@@ -5629,8 +5626,8 @@ div[id^="AbaPersonalizada"] table td {
 
 .brands {
   padding: 70px 0 50px; }
-  .brands .control {
-    margin-top: 30px; }
+  .brands .container .brands-carrossel.slick-initialized.slick-slider {
+    padding: 25px; }
   .brands .brands-carrossel .link-brand {
     text-decoration: none; }
     .brands .brands-carrossel .link-brand img {
@@ -5644,6 +5641,9 @@ div[id^="AbaPersonalizada"] table td {
       font-size: 15px;
       font-weight: 600;
       color: #000; }
+
+.brands-carrossel.slick-initialized.slick-slider {
+  padding: 25px; }
 
 .bundle-content {
   margin-top: 50px; }
@@ -6260,10 +6260,12 @@ div[id^="AbaPersonalizada"] table td {
       display: none; } }
   .main-banner .main-banner__image {
     width: 100%; }
-  .main-banner .control {
+  .main-banner .control, .main-banner .brands-carrossel, .main-banner .regua-carrossel {
     position: relative; }
     .main-banner .control .slider-prev,
-    .main-banner .control .slider-next {
+    .main-banner .control .slider-next, .main-banner .brands-carrossel .slider-prev,
+    .main-banner .brands-carrossel .slider-next, .main-banner .regua-carrossel .slider-prev,
+    .main-banner .regua-carrossel .slider-next {
       position: absolute;
       top: 50%;
       font-size: 25px;
@@ -6280,15 +6282,19 @@ div[id^="AbaPersonalizada"] table td {
       height: 30px;
       box-shadow: 1px 1px 4px -1px #000; }
       .main-banner .control .slider-prev .fa-angle-right,
-      .main-banner .control .slider-next .fa-angle-right {
+      .main-banner .control .slider-next .fa-angle-right, .main-banner .brands-carrossel .slider-prev .fa-angle-right,
+      .main-banner .brands-carrossel .slider-next .fa-angle-right, .main-banner .regua-carrossel .slider-prev .fa-angle-right,
+      .main-banner .regua-carrossel .slider-next .fa-angle-right {
         margin-left: 3px; }
       .main-banner .control .slider-prev .fa-angle-left,
-      .main-banner .control .slider-next .fa-angle-left {
+      .main-banner .control .slider-next .fa-angle-left, .main-banner .brands-carrossel .slider-prev .fa-angle-left,
+      .main-banner .brands-carrossel .slider-next .fa-angle-left, .main-banner .regua-carrossel .slider-prev .fa-angle-left,
+      .main-banner .regua-carrossel .slider-next .fa-angle-left {
         margin-right: 3px; }
-    .main-banner .control .slider-prev {
+    .main-banner .control .slider-prev, .main-banner .brands-carrossel .slider-prev, .main-banner .regua-carrossel .slider-prev {
       left: 2%;
       border-radius: 10px 30px 30px; }
-    .main-banner .control .slider-next {
+    .main-banner .control .slider-next, .main-banner .brands-carrossel .slider-next, .main-banner .regua-carrossel .slider-next {
       right: 2%;
       border-radius: 30px 30px 10px; }
 
@@ -6502,7 +6508,7 @@ div[id^="AbaPersonalizada"] table td {
     color: var(--textButton);
     background-color: var(--bgButton);
     text-transform: uppercase;
-    padding: 13px 60px;
+    padding: 13px 40px;
     border-radius: 20px 20px 0;
     transition: .3s; }
     @media (max-width: 535px) {
@@ -6717,14 +6723,11 @@ div[id^="AbaPersonalizada"] table td {
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
     @media (max-width: 400px) {
       .regua .regua__item {
         padding: 0px 35px; } }
-    .regua .regua__item .regua__image {
-      padding-right: 10px;
-      margin-right: 10px;
-      border-right: 1px solid var(--reguaTitle); }
     .regua .regua__item .regua__content .regua__title {
       color: var(--reguaTitle);
       margin-bottom: 5px;
