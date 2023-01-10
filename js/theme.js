@@ -55,16 +55,38 @@ document.addEventListener("DOMContentLoaded", function glideInit(event) {
     }
 
     // BRANDS CARROSSEL - DESK
-        $('.brands-carrossel').slick({
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            prevArrow: '<button class="slider-prev" style="z-index: 1;"><i class="fas fa-angle-left"></i></button>',
-            nextArrow: '<button class="slider-next"><i class="fas fa-angle-right"></i></button>',
-        });
-        
+        if(document.querySelector('.brands-carrossel')){
+            $('.brands-carrossel').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                prevArrow: '<button class="slider-prev" style="z-index: 1;"><i class="fas fa-angle-left"></i></button>',
+                nextArrow: '<button class="slider-next"><i class="fas fa-angle-right"></i></button>',
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 3
+                        },
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 500,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        }
+            
     // REVIEWS CARROSSEL
     if(document.querySelector('.reviews .dep_lista')) {
         
