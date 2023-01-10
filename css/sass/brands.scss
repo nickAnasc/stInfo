@@ -1,11 +1,14 @@
 .brands {
     padding: 70px 0 50px;
 
-    .control {
-        margin-top: 30px;
+    .container {
+        .brands-carrossel.slick-initialized.slick-slider {
+            padding: 25px;
+        }
     }
 
     .brands-carrossel {
+
         .link-brand {
             text-decoration: none;
 
@@ -29,4 +32,8 @@
             }
         }
     }
+}
+
+.brands-carrossel.slick-initialized.slick-slider {
+    padding: 25px;
 }
