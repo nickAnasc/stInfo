@@ -10,6 +10,14 @@ $font: 'Rubik', sans-serif;
     #{$name}: #{$argument};
 }
 
+.slick-track {
+    display: flex!important;
+}
+
+.slick-slide {
+    height: auto!important;
+}
+
 // styling placeholder
 @mixin placeholder {
     ::-webkit-input-placeholder {
@@ -245,7 +253,9 @@ body {
     display: none;
 }
 
-.control, .brands-carrossel, .regua-carrossel {
+.brands-carrossel,
+.regua-carrossel,
+.product-carrossel {
     position: relative;
 
     .slider-prev,
@@ -265,16 +275,12 @@ body {
     }
 
     .slider-prev {
-        left: 1%;
+        left: 0;
     }
 
     .slider-next {
-        right: 1%;
+        right: 0;
     }
-}
-
-.glider {
-    overflow: hidden;
 }
 
 .modal-dialog {
@@ -324,7 +330,7 @@ body {
     .cart-preview-body {
         height: 400px;
         overflow: scroll;
-        max-height: initial!important;
+        max-height: initial !important;
     }
 
     .cart-preview-table {
