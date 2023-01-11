@@ -87,36 +87,32 @@ document.addEventListener("DOMContentLoaded", function glideInit(event) {
         });
     }
 
-    // REVIEWS CARROSSEL
-    if(document.querySelector('.reviews .dep_lista')) {
-
-
-        document.querySelectorAll('.reviews .dep_lista li[style="display: none;"]').forEach(element => {
-            element.remove();
-        });
-
-        setTimeout(function(){
-            new Glider(document.querySelector('.dep_lista'), {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                draggable: false,
-                duration: 1,
-                arrows: {
-                    prev: document.querySelector('.reviews .control .slider-prev'),
-                    next: document.querySelector('.reviews .control .slider-next')
-                },
-                responsive: [
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1,
-                            duration: 1
-                        }
+    //REVIEWS - CARROSSEL
+    if (document.querySelector('.reviews .dep_lista')) {
+        $('.dep_lista li[style="display: none;"]').remove()
+        $('.reviews .dep_lista').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            prevArrow: '<button class="slider-prev" style="z-index: 1;"><i class="fas fa-angle-left"></i></button>',
+            nextArrow: '<button class="slider-next"><i class="fas fa-angle-right"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
                     }
-                ]
-            });
-        }, 1000);
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
     }
 
     // CARROSSEL PRODUTO INTERNO
