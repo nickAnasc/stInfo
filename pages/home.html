@@ -103,14 +103,10 @@
 <!-- REVIEWS -->
 {% if settings.booleanDepoimentos %}
 	<section class="reviews">
-		<div class="container">
+		<div class="container carrrossel-reviews">
 			<h1 class="showcase__title">{{ settings.titleDepoimentos ? settings.titleDepoimentos : "Depoimentos" }}</h1>
-			<div class="control">
-				{% element 'CustomerReview.reviews' %}
-				<button aria-label="Previous" class="slider-prev"><i class="fas fa-angle-left"></i></button>
-				<button aria-label="Next" class="slider-next"><i class="fas fa-angle-right"></i></button>
-			</div>
-
+			{% element 'CustomerReview.reviews' %}
+				
 			<div class="mais-dep">
 				<a href="/depoimentos-de-clientes">Ver todos</a>
 			</div>
