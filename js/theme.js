@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function glideInit(event) {
 
     // MAIN BANNER DESKTOP
-    if(document.querySelector('.banner-carrossel.desk')) {
+    if (document.querySelector('.banner-carrossel.desk')) {
         $('.banner-carrossel.desk .init').slick({
             infinite: true,
             slidesToShow: 1,
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function glideInit(event) {
     }
 
     // MAIN BANNER MOBILE
-    if(document.querySelector('.banner-carrossel-mb')) {
+    if (document.querySelector('.banner-carrossel-mb')) {
         $('.banner-carrossel-mb .init').slick({
             infinite: true,
             slidesToShow: 1,
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function glideInit(event) {
     }
 
     // RÉGUA CARROSSEL 
-    if(document.querySelector('.regua-carrossel')){
+    if (document.querySelector('.regua-carrossel')) {
         $('.regua-carrossel').slick({
             infinite: true,
             slidesToShow: 4,
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function glideInit(event) {
     }
 
     // CARROSSEL PRODUTO INTERNO
-    if(document.querySelector('.thumb-carrossel')) {
+    if (document.querySelector('.thumb-carrossel')) {
         new Glider(document.querySelector('.thumb-carrossel'), {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function glideInit(event) {
     }
 
     // BANNER TRIPLO
-    if(document.querySelector('.banner-triplo')) {
+    if (document.querySelector('.banner-triplo')) {
         new Glider(document.querySelector('.banner-triplo .carrossel-init'), {
             draggable: false,
             duration: 1,
@@ -253,32 +253,32 @@ document.addEventListener("DOMContentLoaded", function menuMobile(event) {
     var cartContent = document.querySelector('.cart-resume');
 
     btnMenu.forEach(btn => {
-        btn.addEventListener('click', function(){
-            if(this.dataset.action == 'open') {
+        btn.addEventListener('click', function () {
+            if (this.dataset.action == 'open') {
                 menuContent.classList.add('open')
             }
-            else if(this.dataset.action == 'close') {
+            else if (this.dataset.action == 'close') {
                 menuContent.classList.remove('open')
             }
         })
     });
 
     dropItem.forEach(firstItem => {
-        firstItem.addEventListener('click', function(){
+        firstItem.addEventListener('click', function () {
             var dropContent = this.closest('.first-lvl__item').querySelector('.second-lvl');
             dropContent.classList.toggle('open');
         })
     });
 
     dropThird.forEach(firstItem => {
-        firstItem.addEventListener('click', function(){
+        firstItem.addEventListener('click', function () {
             var dropContent = this.closest('.second-lvl__item').querySelector('.third-lvl');
             dropContent.classList.toggle('open');
         })
     });
 
     cartAction.forEach(element => {
-        element.addEventListener('click', function(){
+        element.addEventListener('click', function () {
             cartContent.classList.toggle('open');
         })
     });
