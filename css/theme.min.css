@@ -790,6 +790,12 @@ html .botao-lancamento {
   margin: 0;
   float: none; }
 
+.slick-track {
+  display: flex !important; }
+
+.slick-slide {
+  height: auto !important; }
+
 img {
   max-width: 100%;
   display: block; }
@@ -947,12 +953,22 @@ body {
 .infobox.danger {
   display: none; }
 
-.control, .brands-carrossel, .regua-carrossel {
+.banner-triplo,
+.brands-carrossel,
+.regua-carrossel,
+.reviews,
+.product-carrossel {
   position: relative; }
-  .control .slider-prev,
-  .control .slider-next, .brands-carrossel .slider-prev,
-  .brands-carrossel .slider-next, .regua-carrossel .slider-prev,
-  .regua-carrossel .slider-next {
+  .banner-triplo .slider-prev,
+  .banner-triplo .slider-next,
+  .brands-carrossel .slider-prev,
+  .brands-carrossel .slider-next,
+  .regua-carrossel .slider-prev,
+  .regua-carrossel .slider-next,
+  .reviews .slider-prev,
+  .reviews .slider-next,
+  .product-carrossel .slider-prev,
+  .product-carrossel .slider-next {
     position: absolute;
     top: 50%;
     font-size: 30px;
@@ -969,13 +985,18 @@ body {
     height: 30px;
     border-radius: 50%;
     font-size: 20px; }
-  .control .slider-prev, .brands-carrossel .slider-prev, .regua-carrossel .slider-prev {
-    left: 1%; }
-  .control .slider-next, .brands-carrossel .slider-next, .regua-carrossel .slider-next {
-    right: 1%; }
-
-.glider {
-  overflow: hidden; }
+  .banner-triplo .slider-prev,
+  .brands-carrossel .slider-prev,
+  .regua-carrossel .slider-prev,
+  .reviews .slider-prev,
+  .product-carrossel .slider-prev {
+    left: 0; }
+  .banner-triplo .slider-next,
+  .brands-carrossel .slider-next,
+  .regua-carrossel .slider-next,
+  .reviews .slider-next,
+  .product-carrossel .slider-next {
+    right: 0; }
 
 .modal-dialog {
   margin: initial !important;
@@ -6437,9 +6458,6 @@ div[id^="AbaPersonalizada"] table td {
 .carrosse-categories {
   margin-top: 50px; }
 
-.showcase .showcase-content .glider-track {
-  margin: 10px 0; }
-
 .showcase .showcase-content .product {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6473,7 +6491,7 @@ div[id^="AbaPersonalizada"] table td {
     border-bottom: 1px solid transparent; }
 
 .showcase .showcase-content .showcase-content__item {
-  padding: 10px;
+  padding: 5px;
   transition: .3s; }
   .showcase .showcase-content .showcase-content__item a {
     text-decoration: none;
