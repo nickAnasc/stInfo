@@ -4,26 +4,26 @@ document.addEventListener("DOMContentLoaded", function glideInit(event) {
     // MAIN BANNER DESKTOP
     if(document.querySelector('.banner-carrossel.desk')) {
         $('.banner-carrossel.desk .init').slick({
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 4000,
-          prevArrow: '<button class="slider-prev" style="z-index: 1;"><i class="fas fa-angle-left"></i></button>',
-          nextArrow: '<button class="slider-next"><i class="fas fa-angle-right"></i></button>',
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            prevArrow: '<button class="slider-prev" style="z-index: 1;"><i class="fas fa-angle-left"></i></button>',
+            nextArrow: '<button class="slider-next"><i class="fas fa-angle-right"></i></button>',
         });
     }
 
     // MAIN BANNER MOBILE
     if(document.querySelector('.banner-carrossel-mb')) {
         $('.banner-carrossel-mb .init').slick({
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 4000,
-          prevArrow: '<button class="slider-prev" style="z-index: 1;"><i class="fas fa-angle-left"></i></button>',
-          nextArrow: '<button class="slider-next"><i class="fas fa-angle-right"></i></button>',
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            prevArrow: '<button class="slider-prev" style="z-index: 1;"><i class="fas fa-angle-left"></i></button>',
+            nextArrow: '<button class="slider-next"><i class="fas fa-angle-right"></i></button>',
         });
     }
 
@@ -51,45 +51,45 @@ document.addEventListener("DOMContentLoaded", function glideInit(event) {
                     }
                 },
             ]
-        });    
+        });
     }
 
-    // BRANDS CARROSSEL - DESK
-        if(document.querySelector('.brands-carrossel')){
-            $('.brands-carrossel').slick({
-                infinite: true,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 4000,
-                prevArrow: '<button class="slider-prev" style="z-index: 1;"><i class="fas fa-angle-left"></i></button>',
-                nextArrow: '<button class="slider-next"><i class="fas fa-angle-right"></i></button>',
-                responsive: [
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 3
-                        },
+    // BRANDS CARROSSEL
+    if (document.querySelector('.brands-carrossel')) {
+        $('.brands-carrossel').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            prevArrow: '<button class="slider-prev" style="z-index: 1;"><i class="fas fa-angle-left"></i></button>',
+            nextArrow: '<button class="slider-next"><i class="fas fa-angle-right"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3
                     },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 500,
-                        settings: {
-                            slidesToShow: 1
-                        }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
                     }
-                ]
-            });
-        }
-            
+                },
+                {
+                    breakpoint: 430,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                },
+            ]
+        });
+    }
+
     // REVIEWS CARROSSEL
     if(document.querySelector('.reviews .dep_lista')) {
-        
+
 
         document.querySelectorAll('.reviews .dep_lista li[style="display: none;"]').forEach(element => {
             element.remove();
@@ -213,45 +213,36 @@ document.addEventListener("DOMContentLoaded", function glideInit(event) {
         });
     }
 
-    // CARROSSEL PRODUTOS
-    if(document.querySelector('.showcase')) {
-        var products = document.querySelectorAll('.product-carrossel.prod');
-
-        products.forEach(element => {
-            new Glider(element, {
-                draggable: false,
-                duration: 1,
-                arrows: {
-                    prev: element.closest('.control').querySelector('.slider-prev'),
-                    next: element.closest('.control').querySelector('.slider-next')
+    //CARROSSEL - PRODUTOS - DESTAQUE
+    if (document.querySelector('.product-carrossel')) {
+        $('.product-carrossel').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            prevArrow: '<button class="slider-prev" style="z-index: 1;"><i class="fas fa-angle-left"></i></button>',
+            nextArrow: '<button class="slider-next"><i class="fas fa-angle-right"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3
+                    },
                 },
-                responsive: [
-                    {
-                        breakpoint: 1200,
-                        settings: {
-                            slidesToShow: 4,
-                            slidesToScroll: 1,
-                            duration: 1
-                        }
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
                     },
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1,
-                            duration: 1
-                        }
-                    },
-                    {
-                        breakpoint: 430,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1,
-                            duration: 1
-                        }
+                },
+                {
+                    breakpoint: 450,
+                    settings: {
+                        slidesToShow: 1
                     }
-                ]
-            });
+                }
+            ]
         });
     }
 });
