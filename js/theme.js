@@ -179,34 +179,30 @@ document.addEventListener("DOMContentLoaded", function glideInit(event) {
         });
     }
 
-    // BANNER TRIPLO
     if (document.querySelector('.banner-triplo')) {
-        new Glider(document.querySelector('.banner-triplo .carrossel-init'), {
-            draggable: false,
-            duration: 1,
-            arrows: {
-                prev: document.querySelector('.banner-triplo .slider-prev'),
-                next: document.querySelector('.banner-triplo .slider-next')
-            },
+        $('.banner-triplo .carrossel-init').slick ({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            prevArrow: '<button class="slider-prev" style="z-index: 1;"><i class="fas fa-angle-left"></i></button>',
+            nextArrow: '<button class="slider-next"><i class="fas fa-angle-right"></i></button>',
             responsive: [
                 {
                     breakpoint: 992,
                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        duration: 1
+                        slidesToShow: 2
                     }
                 },
                 {
                     breakpoint: 768,
                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        duration: 1
+                        slidesToShow: 1
                     }
                 }
             ]
-        });
+        })
     }
 
     //CARROSSEL - PRODUTOS - DESTAQUE
