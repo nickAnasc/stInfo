@@ -6920,10 +6920,10 @@ div[id^="AbaPersonalizada"] table td {
   font-weight: 700;
   line-height: 1.6rem; }
 
-.suggestion-words {
+.suggestion-words, .no-results {
   padding: 15px;
   width: 100%; }
-  .suggestion-words span {
+  .suggestion-words span, .no-results span {
     border: none;
     color: #5a5a5a;
     display: block;
@@ -6932,7 +6932,7 @@ div[id^="AbaPersonalizada"] table td {
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.5rem; }
-    .suggestion-words span:hover {
+    .suggestion-words span:hover, .no-results span:hover {
       cursor: pointer; }
 
 .suggestion-products {
