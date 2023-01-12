@@ -773,6 +773,11 @@
             width: initial;
             margin: initial;
             padding: initial;
+
+            p {
+                font-size: 16px;
+                line-height: 18px;
+            }
         }
 
         .board ul li:first-child {
