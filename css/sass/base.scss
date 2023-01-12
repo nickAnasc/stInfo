@@ -327,6 +327,37 @@ body {
             text-decoration: none;
             cursor: pointer;
         }
+
+        .page-simula-frete {
+            @media screen and (min-width: 500px) {
+                height: 400px;
+                overflow: scroll;
+            }
+
+            .tablePage {
+                margin-top: 10px;
+
+                td {
+                    padding: 10px;
+                }
+            }
+
+            .tablePage:last-child tr:nth-child(1) {
+                display: none;
+            }
+
+
+            .tablePage:last-child tr:nth-child(even) {
+                background-color: #eee;
+            }
+
+            .tablePage:last-child tr {
+                @media screen and (min-width: 500px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
     }
 
     .cart-preview-body {
