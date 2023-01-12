@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function glideInit(event) {
             infinite: true,
             slidesToShow: 4,
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 3000,
             prevArrow: '<button class="slider-prev" style="z-index: 1;"><i class="fas fa-angle-left"></i></button>',
             nextArrow: '<button class="slider-next"><i class="fas fa-angle-right"></i></button>',
