@@ -138,20 +138,20 @@
         <script type="text/javascript" src="{{ asset('js/jsMinify/promotion-regressive.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/jsMinify/page-product.min.js') }}"></script>
     {% endif %}
-    {% if pages.current == 'home' %}
+   
         <script type="text/javascript" src="{{ asset('js/jsMinify/noticias.min.js') }}"></script>
         <script>
             (function(){
                 setTimeout(function(){
                     var valPhone = document.querySelector('.hidden-phone').value;
                     var linkWhats = document.querySelector('.whatsap-web');
-                    var linkFormat = 'https://web.whatsapp.com/send?phone=+55' + valPhone.replace(/\D/g,'');
+                    var linkFormat = 'https://wa.me/55' + valPhone.replace(/\D/g,'');
 
                     linkWhats.setAttribute('href', linkFormat)
                 }, 1000)
             })();
         </script>
-    {% endif %}
+    
     {% if pages.current == 'search' %}
         <script>
             (function(){
