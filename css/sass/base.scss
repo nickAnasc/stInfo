@@ -329,7 +329,7 @@ body {
         }
 
         .page-simula-frete {
-            @media screen and (min-width: 500px) {
+            @media screen and (max-width: 600px) {
                 height: 400px;
                 overflow: scroll;
             }
@@ -352,7 +352,7 @@ body {
             }
 
             .tablePage:last-child tr {
-                @media screen and (min-width: 500px) {
+                @media screen and (max-width: 600px) {
                     display: flex;
                     flex-direction: column;
                 }
