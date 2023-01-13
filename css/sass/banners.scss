@@ -76,10 +76,6 @@
         }
     }
 
-    .glider-slide {
-        padding: 0 15px;
-    }
-
     .image-banner {
         width: 100%;
         border: 3px solid #fff;
@@ -92,6 +88,10 @@
         @media(max-width: 991px) {
             display: block;
         }
+    }
+
+    .slick-slide {
+        padding: 5px;
     }
 }
 
