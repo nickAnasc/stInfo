@@ -1032,7 +1032,7 @@ body {
       border-radius: 30px;
       text-decoration: none;
       cursor: pointer; }
-    @media screen and (min-width: 500px) {
+    @media screen and (max-width: 600px) {
       .modal-dialog .modal-content .page-simula-frete {
         height: 400px;
         overflow: scroll; } }
@@ -1044,7 +1044,7 @@ body {
       display: none; }
     .modal-dialog .modal-content .page-simula-frete .tablePage:last-child tr:nth-child(even) {
       background-color: #eee; }
-    @media screen and (min-width: 500px) {
+    @media screen and (max-width: 600px) {
       .modal-dialog .modal-content .page-simula-frete .tablePage:last-child tr {
         display: flex;
         flex-direction: column; } }
@@ -3493,7 +3493,8 @@ div[id^="AbaPersonalizada"] table td {
 
 .page-newsletter .page-content > * {
   background: #fff;
-  padding: 30px; }
+  padding: 30px;
+  text-align: center; }
 
 .page-newsletter h1.color {
   text-transform: uppercase;
@@ -3517,6 +3518,18 @@ div[id^="AbaPersonalizada"] table td {
   font-weight: 400;
   line-height: 1.3rem;
   margin-top: 30px; }
+
+.page-newsletter .newsletterBTimg {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background-color: var(--bgButton);
+  color: var(--textButton);
+  display: inline-block;
+  transition: .3s;
+  text-decoration: none;
+  border: none; }
 
 .page-busca_noticias .noticias li,
 .page-noticia .noticias li {
@@ -4798,42 +4811,46 @@ div[id^="AbaPersonalizada"] table td {
       .page-register .page-content #CadastroAbas ul li a:hover,
       .page-cadastro_bloqueado .page-content #CadastroAbas ul li a:hover {
         border-radius: 30px 30px 0; }
-  .page-register .page-content #frm2 fieldset,
-  .page-cadastro_bloqueado .page-content #frm2 fieldset {
-    width: 60%;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    border-radius: 20px 20px 0;
-    box-shadow: 1px 1px 0px 0px #00000040; }
-    @media (max-width: 767px) {
-      .page-register .page-content #frm2 fieldset,
-      .page-cadastro_bloqueado .page-content #frm2 fieldset {
-        width: 100%; } }
-    .page-register .page-content #frm2 fieldset #fisica,
-    .page-register .page-content #frm2 fieldset #juridica,
-    .page-cadastro_bloqueado .page-content #frm2 fieldset #fisica,
-    .page-cadastro_bloqueado .page-content #frm2 fieldset #juridica {
-      margin-top: 20px; }
-    .page-register .page-content #frm2 fieldset label,
-    .page-cadastro_bloqueado .page-content #frm2 fieldset label {
-      width: 100%;
-      margin-bottom: 15px;
-      font-size: 15px; }
-      .page-register .page-content #frm2 fieldset label input.text,
-      .page-cadastro_bloqueado .page-content #frm2 fieldset label input.text {
+  .page-register .page-content #frm2 .board,
+  .page-cadastro_bloqueado .page-content #frm2 .board {
+    text-align: center; }
+    .page-register .page-content #frm2 .board fieldset,
+    .page-cadastro_bloqueado .page-content #frm2 .board fieldset {
+      width: 60%;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      border-radius: 20px 20px 0;
+      box-shadow: 1px 1px 0px 0px #00000040;
+      text-align: left; }
+      @media (max-width: 767px) {
+        .page-register .page-content #frm2 .board fieldset,
+        .page-cadastro_bloqueado .page-content #frm2 .board fieldset {
+          width: 100%; } }
+      .page-register .page-content #frm2 .board fieldset #fisica,
+      .page-register .page-content #frm2 .board fieldset #juridica,
+      .page-cadastro_bloqueado .page-content #frm2 .board fieldset #fisica,
+      .page-cadastro_bloqueado .page-content #frm2 .board fieldset #juridica {
+        margin-top: 20px; }
+      .page-register .page-content #frm2 .board fieldset label,
+      .page-cadastro_bloqueado .page-content #frm2 .board fieldset label {
         width: 100%;
-        padding: 10px;
-        margin: 10px 0px 5px;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        transition: .3s; }
-        .page-register .page-content #frm2 fieldset label input.text:focus,
-        .page-cadastro_bloqueado .page-content #frm2 fieldset label input.text:focus {
-          border-radius: 20px 20px 0;
-          border: 1px solid #888; }
+        margin-bottom: 15px;
+        font-size: 15px; }
+        .page-register .page-content #frm2 .board fieldset label input.text,
+        .page-cadastro_bloqueado .page-content #frm2 .board fieldset label input.text {
+          width: 100%;
+          padding: 10px;
+          margin: 10px 0px 5px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          transition: .3s; }
+          .page-register .page-content #frm2 .board fieldset label input.text:focus,
+          .page-cadastro_bloqueado .page-content #frm2 .board fieldset label input.text:focus {
+            border-radius: 20px 20px 0;
+            border: 1px solid #888; }
   .page-register .page-content #frm2 .termContainerRegister,
   .page-cadastro_bloqueado .page-content #frm2 .termContainerRegister {
     text-align: center; }
@@ -5022,7 +5039,7 @@ div[id^="AbaPersonalizada"] table td {
         display: flex;
         position: relative; }
         .header .header__content .header__search .search form .suggestion {
-          z-index: 1; }
+          z-index: 9999; }
         .header .header__content .header__search .search form .search-key {
           border: none;
           border-radius: 5px 0px 0px 5px;
@@ -6350,8 +6367,6 @@ div[id^="AbaPersonalizada"] table td {
       .banner-triplo .carrossel-init {
         margin-right: 0;
         margin-left: 0; } }
-  .banner-triplo .glider-slide {
-    padding: 0 15px; }
   .banner-triplo .image-banner {
     width: 100%;
     border: 3px solid #fff; }
@@ -6362,6 +6377,8 @@ div[id^="AbaPersonalizada"] table td {
       .banner-triplo .slider-prev,
       .banner-triplo .slider-next {
         display: block; } }
+  .banner-triplo .slick-slide {
+    padding: 5px; }
 
 /**
  * Banner Line
