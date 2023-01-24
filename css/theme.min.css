@@ -867,6 +867,17 @@ body {
 .page-search .Seguro {
   display: none; }
 
+.page-search #Vitrine {
+  width: 60%;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 1px 1px 0px 0px #00000040;
+  text-align: left; }
+  @media (max-width: 992px) {
+    .page-search #Vitrine {
+      width: 80%; } }
+
 .page-search #vitrine-catalogo {
   width: 1320px;
   margin: 0 auto;
@@ -908,15 +919,18 @@ body {
     .page-search #vitrine-catalogo #Vitrine form[name="form1"] fieldset select.select {
       font-size: 15px;
       padding: 8px 10px;
-      border: 1px solid #999;
-      border-radius: 5px;
-      margin-bottom: 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
       margin-top: 10px;
       transition: .3s; }
       .page-search #vitrine-catalogo #Vitrine form[name="form1"] fieldset input.text:focus,
       .page-search #vitrine-catalogo #Vitrine form[name="form1"] fieldset select.select:focus {
         border-radius: 30px 30px 0;
         border: 1px solid #333; }
+    .page-search #vitrine-catalogo #Vitrine form[name="form1"] fieldset .campoform {
+      margin-top: 10px;
+      margin-right: 5px; }
     .page-search #vitrine-catalogo #Vitrine form[name="form1"] fieldset .btn-busca-avancada {
       display: inline-block;
       padding: 15px 20px;
@@ -5792,11 +5806,11 @@ div[id^="AbaPersonalizada"] table td {
 .customer .customer__flex {
   position: relative;
   transition: .3s; }
-  .customer .customer__flex a {
+  .customer .customer__flex a, .customer .customer__flex .hide-login {
     color: var(--textHeader); }
-    @media (max-width: 1199px) {
-      .customer .customer__flex a {
-        display: none; } }
+  @media (max-width: 1199px) {
+    .customer .customer__flex .hide-login {
+      display: none; } }
 
 .customer .drop-login {
   transition: .1s;
