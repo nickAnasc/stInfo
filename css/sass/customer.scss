@@ -6,9 +6,12 @@
         position: relative;
         transition: .3s;
 
-        a {
+        a, .hide-login {
             color: var(--textHeader);
-            @media(max-width: 1199px) {
+        }
+
+        @media(max-width: 1199px) {
+            .hide-login {
                 display: none;
             }
         }
