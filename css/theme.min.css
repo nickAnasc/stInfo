@@ -193,11 +193,7 @@ html .botao-lancamento {
   position: static; }
 
 .Seguro {
-  position: static;
-  right: initial;
-  top: initial;
-  font: initial;
-  color: initial; }
+  display: none; }
   .Seguro img {
     position: static;
     top: initial; }
@@ -3411,6 +3407,8 @@ div[id^="AbaPersonalizada"] table td {
 
 .page-login .page-content {
   padding: 100px 0; }
+  .page-login .page-content .Seguro {
+    display: none; }
   .page-login .page-content .container .container2 .board {
     display: -webkit-box;
     display: -ms-flexbox;
